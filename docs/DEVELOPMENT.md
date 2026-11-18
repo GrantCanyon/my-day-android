@@ -29,7 +29,9 @@ Delivery remains subject to Android and device battery policies. A successful bu
 
 CI assembles a debug APK. The custom debug instrumentation can exercise actual Android SQLite and data conversions using isolated data; it is available to run but has not been executed for this latest public snapshot. It does not automate the full UI or alarm delivery.
 
-Before calling a build device-verified, record the APK version and device/Android version, then check:
+On 2026-11-18 the owner reported that both applications had been checked on a phone and worked. This is owner-reported manual validation; an APK-specific protocol and per-scenario results were not supplied.
+
+For a reproducible device acceptance pass, record the APK version and device/Android version, then check:
 
 1. Launch with fresh app data and confirm that the synthetic sample starts on the current date.
 2. Switch both views, edit notes/times, and change progress through 0%, 50% and 100%.
@@ -39,4 +41,4 @@ Before calling a build device-verified, record the APK version and device/Androi
 6. Run `PlannerDataSelfTest` as described in the [README](../README.md).
 7. Enable reminders, grant permission where required, test edits/deletions and check behavior after reboot and under battery restrictions.
 
-These are acceptance criteria, not completed test results. Earlier manual phone testing helped shape the application but does not establish runtime behavior of this snapshot.
+This checklist describes how to repeat the checks; the owner's general confirmation does not separately document each item. The debug instrumentation result remains unconfirmed until that command is run and its output recorded.
